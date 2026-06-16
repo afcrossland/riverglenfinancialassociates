@@ -1,0 +1,417 @@
+/* ===========================
+   Riverglen IFA — Shared Styles
+   =========================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --blue-50:  #E6F1FB;
+  --blue-200: #85B7EB;
+  --blue-400: #378ADD;
+  --blue-600: #185FA5;
+  --blue-800: #0C447C;
+  --blue-900: #042C53;
+
+  --teal-50:  #E1F5EE;
+  --teal-600: #0F6E56;
+  --teal-800: #085041;
+
+  --amber-50:  #FAEEDA;
+  --amber-600: #854F0B;
+  --amber-800: #633806;
+
+  --coral-50:  #FAECE7;
+  --coral-600: #993C1D;
+  --coral-800: #712B13;
+
+  --purple-50:  #EEEDFE;
+  --purple-600: #534AB7;
+  --purple-800: #3C3489;
+
+  --green-50:  #EAF3DE;
+  --green-600: #3B6D11;
+
+  --gray-100: #F5F5F5;
+  --gray-200: #E8E8E8;
+  --gray-400: #9E9E9E;
+  --gray-600: #5F5E5A;
+  --gray-900: #1A1A1A;
+
+  --text-primary:   var(--gray-900);
+  --text-secondary: var(--gray-600);
+  --text-muted:     var(--gray-400);
+
+  --bg-primary:   #FFFFFF;
+  --bg-secondary: #F8F9FA;
+  --border:       rgba(0, 0, 0, 0.1);
+  --border-hover: rgba(0, 0, 0, 0.2);
+
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-primary);
+  background: var(--bg-primary);
+}
+
+/* ===========================
+   Navigation
+   =========================== */
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.15);
+}
+
+.nav-logo {
+  font-size: 17px;
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+  letter-spacing: -0.3px;
+}
+
+.nav-logo span {
+  color: var(--blue-200);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: white;
+}
+
+.nav-cta {
+  background: white;
+  color: var(--blue-600);
+  border: none;
+  padding: 8px 18px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.nav-cta:hover {
+  opacity: 0.9;
+}
+
+/* ===========================
+   Page Hero (shared)
+   =========================== */
+
+.page-hero {
+  background: linear-gradient(135deg, var(--blue-800) 0%, var(--blue-600) 100%);
+  padding: 0;
+  color: white;
+}
+
+.hero-body {
+  padding: 4rem 2rem 3rem;
+}
+
+.hero-tag {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--blue-200);
+  font-size: 12px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 0.5px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 1rem;
+}
+
+.page-hero h1 {
+  font-size: 28px;
+  font-weight: 500;
+  color: white;
+  margin-bottom: 0.5rem;
+  line-height: 1.25;
+}
+
+.page-hero p {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 520px;
+  line-height: 1.6;
+}
+
+/* ===========================
+   Buttons
+   =========================== */
+
+.btn-white {
+  background: white;
+  color: var(--blue-600);
+  border: none;
+  padding: 10px 20px;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: opacity 0.2s;
+}
+
+.btn-white:hover { opacity: 0.9; }
+
+.btn-ghost {
+  background: transparent;
+  color: white;
+  padding: 10px 20px;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 500;
+  border: 0.5px solid rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: border-color 0.2s;
+}
+
+.btn-ghost:hover { border-color: rgba(255, 255, 255, 0.7); }
+
+/* ===========================
+   Cards
+   =========================== */
+
+.card {
+  background: var(--bg-primary);
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+
+.card:hover { border-color: var(--border-hover); }
+
+/* ===========================
+   Badges & Pills
+   =========================== */
+
+.badge {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.badge-libf   { background: var(--blue-50);   color: var(--blue-800); }
+.badge-cii    { background: var(--teal-50);   color: var(--teal-800); }
+.badge-partner { background: var(--purple-50); color: var(--purple-800); }
+.badge-years  { background: var(--gray-100);  color: var(--gray-600); }
+.badge-fca    { background: var(--blue-50);   color: var(--blue-800); }
+
+.spec-pill {
+  font-size: 11px;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  padding: 2px 8px;
+  border-radius: 4px;
+  border: 0.5px solid var(--border);
+  display: inline-block;
+}
+
+/* ===========================
+   Section Labels
+   =========================== */
+
+.section-label {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 1rem;
+}
+
+/* ===========================
+   Divider
+   =========================== */
+
+.divider {
+  height: 0.5px;
+  background: var(--border);
+  margin: 0 2rem;
+}
+
+/* ===========================
+   CTA Band
+   =========================== */
+
+.cta-band {
+  background: linear-gradient(135deg, var(--blue-800), var(--blue-600));
+  padding: 2.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.cta-band h2 {
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+}
+
+.cta-band p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.75);
+  margin-top: 4px;
+}
+
+.cta-band .btn-row {
+  display: flex;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+/* ===========================
+   Footer
+   =========================== */
+
+.footer {
+  padding: 2rem;
+  background: var(--bg-secondary);
+  border-top: 0.5px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.footer-brand {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.footer-brand p {
+  font-size: 12px;
+  color: var(--text-secondary);
+  font-weight: 400;
+  margin-top: 4px;
+  line-height: 1.6;
+  max-width: 280px;
+}
+
+.footer-contact {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.9;
+}
+
+.footer-contact a {
+  color: var(--blue-600);
+  text-decoration: none;
+}
+
+.footer-legal {
+  font-size: 11px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  max-width: 240px;
+}
+
+/* ===========================
+   Nav Dropdown
+   =========================== */
+
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown > a {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  border: 0.5px solid rgba(0,0,0,0.12);
+  border-radius: var(--radius-md);
+  padding: 6px;
+  list-style: none;
+  min-width: 230px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  z-index: 100;
+}
+
+.dropdown-menu::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 0;
+  right: 0;
+  height: 10px;
+}
+
+.nav-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 7px 12px;
+  font-size: 12px;
+  color: var(--text-secondary) !important;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background: var(--bg-secondary);
+  color: var(--text-primary) !important;
+}
+
+/* ===========================
+   Responsive
+   =========================== */
+
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .nav { padding: 1rem; }
+  .hero-body { padding: 2rem 1rem; }
+  .cta-band { flex-direction: column; text-align: center; }
+  .cta-band .btn-row { justify-content: center; }
+  .footer { flex-direction: column; padding: 1.5rem; }
+}

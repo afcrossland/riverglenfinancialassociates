@@ -1,0 +1,294 @@
+/* ===========================
+   Service Page Styles
+   =========================== */
+
+.service-content {
+  padding: 2.5rem 2rem;
+}
+
+.sc-section {
+  max-width: 720px;
+}
+
+.sc-lead {
+  font-size: 15px;
+  color: var(--text-primary);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.sc-body p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 0.75rem;
+}
+
+.sc-h2 {
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin: 1.75rem 0 0.75rem;
+}
+
+.sc-list {
+  list-style: none;
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin: 0.5rem 0 1.5rem;
+}
+
+.sc-list li {
+  font-size: 14px;
+  color: var(--text-secondary);
+  padding: 10px 14px 10px 36px;
+  position: relative;
+  border-bottom: 0.5px solid var(--border);
+  line-height: 1.45;
+}
+
+.sc-list li:last-child {
+  border-bottom: none;
+}
+
+.sc-list li::before {
+  content: "";
+  position: absolute;
+  left: 14px;
+  top: 17px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--blue-400);
+}
+
+.sc-list li strong {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.sc-checklist {
+  list-style: none;
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin: 0.5rem 0 1.5rem;
+}
+
+.sc-checklist li {
+  font-size: 14px;
+  color: var(--text-secondary);
+  padding: 10px 14px 10px 40px;
+  position: relative;
+  border-bottom: 0.5px solid var(--border);
+  line-height: 1.45;
+}
+
+.sc-checklist li:last-child {
+  border-bottom: none;
+}
+
+.sc-checklist li::before {
+  content: "✓";
+  position: absolute;
+  left: 14px;
+  top: 10px;
+  color: var(--teal-600);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.disclaimer {
+  background: var(--amber-50);
+  border: 0.5px solid rgba(133, 79, 11, 0.25);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+  font-size: 12px;
+  color: var(--amber-600);
+  line-height: 1.55;
+  margin-top: 1.5rem;
+}
+
+.disclaimer + .disclaimer {
+  margin-top: 0.5rem;
+}
+
+.fca-note {
+  background: var(--gray-100);
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 10px 14px;
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 1rem;
+  line-height: 1.5;
+}
+
+/* Two-column intro layout */
+.sc-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 960px;
+  margin-bottom: 2rem;
+}
+
+.sc-split-section h2 {
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.sc-split-section p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 0.75rem;
+}
+
+/* Contact embed (finding lost pensions) */
+.sc-form-section {
+  max-width: 560px;
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  border: 0.5px solid var(--border);
+}
+
+.sc-form-section h2 {
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 0.4rem;
+}
+
+.sc-form-section > p {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 1.25rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-field.full {
+  grid-column: 1 / -1;
+}
+
+.form-field label {
+  font-size: 12px;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.form-field input,
+.form-field textarea {
+  background: white;
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  font-size: 14px;
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  border-color: var(--blue-400);
+}
+
+.form-field textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-submit {
+  margin-top: 12px;
+  display: inline-block;
+  background: var(--blue-600);
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.form-submit:hover {
+  background: var(--blue-800);
+}
+
+/* Related services */
+.sc-related {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 0.5px solid var(--border);
+}
+
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.related-card {
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  border: 0.5px solid var(--border);
+  text-decoration: none;
+  display: block;
+  transition: border-color 0.2s;
+}
+
+.related-card:hover {
+  border-color: var(--border-hover);
+}
+
+.related-card-title {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.related-card-desc {
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .service-content {
+    padding: 1.5rem 1rem;
+  }
+
+  .sc-split {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .related-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
