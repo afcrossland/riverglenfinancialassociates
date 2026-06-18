@@ -404,6 +404,46 @@ body {
 }
 
 /* ===========================
+   Mobile nav toggle button
+   =========================== */
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.nav-toggle-bar {
+  display: block;
+  width: 20px;
+  height: 1.5px;
+  background: white;
+  border-radius: 2px;
+  transition: transform 0.22s ease, opacity 0.18s ease;
+  transform-origin: center;
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(1) {
+  transform: translateY(6.5px) rotate(45deg);
+}
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(3) {
+  transform: translateY(-6.5px) rotate(-45deg);
+}
+
+/* ===========================
    Nav Dropdown
    =========================== */
 
@@ -465,8 +505,63 @@ body {
    =========================== */
 
 @media (max-width: 768px) {
-  .nav-links { display: none; }
-  .nav { padding: 1rem; }
+  /* Nav shell */
+  .nav {
+    padding: 0.75rem 1rem;
+    flex-wrap: wrap;
+  }
+  .nav-cta { display: none; }
+  .nav-toggle { display: flex; }
+
+  /* Nav links — hidden by default, shown when .open */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+    padding: 0.5rem 0 0.75rem;
+    border-top: 0.5px solid rgba(255, 255, 255, 0.12);
+    margin-top: 0.5rem;
+  }
+  .nav-links.open { display: flex; }
+
+  .nav-links > li {
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.07);
+  }
+  .nav-links > li:last-child { border-bottom: none; }
+
+  .nav-links > li > a {
+    display: block !important;
+    padding: 10px 0 !important;
+    font-size: 14px !important;
+    color: rgba(255, 255, 255, 0.85) !important;
+  }
+
+  /* Services dropdown — always expanded inline on mobile */
+  .dropdown-menu {
+    position: static !important;
+    display: block !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 2px 0 6px 14px !important;
+    min-width: auto !important;
+  }
+  .dropdown-menu::before { display: none; }
+  .dropdown-menu a {
+    padding: 5px 0 !important;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.6) !important;
+    border-radius: 0 !important;
+  }
+  .dropdown-menu a:hover {
+    background: none !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+  }
+  /* Hide chevron — services always visible on mobile */
+  .nav-dropdown > a svg { display: none; }
+
+  /* Rest of page */
   .hero-body { padding: 2rem 1rem; }
   .cta-band { flex-direction: column; text-align: center; }
   .cta-band .btn-row { justify-content: center; }
