@@ -45,125 +45,32 @@
 
   <main class="knowledge-content">
 
-    <p class="knowledge-intro">We publish a range of resources to help you stay informed about financial planning topics — from investment basics and ISA allowances to retirement planning, estate planning and beyond. All resources are provided free of charge. Contact us if you'd like printed copies.</p>
+    <p class="knowledge-intro">We publish bi-monthly newsletters and a range of in-depth guides covering investments, retirement, tax planning, protection and more. Filter by topic to find what's most relevant to you, or contact us to request printed copies.</p>
 
-    <!-- Topic overview -->
-    <p class="section-label">Topics covered</p>
-    <div class="topic-grid">
-
-      <div class="topic-card">
-        <div class="topic-icon icon-blue">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
-        </div>
-        <h3>Investments &amp; savings</h3>
-        <p>ISAs, OEICs, unit trusts, bonds and tax-efficient strategies for building wealth.</p>
-      </div>
-
-      <div class="topic-card">
-        <div class="topic-icon icon-amber">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-        </div>
-        <h3>Pensions &amp; retirement</h3>
-        <p>Pension consolidation, annuities, SIPPs, drawdown and retirement income planning.</p>
-      </div>
-
-      <div class="topic-card">
-        <div class="topic-icon icon-teal">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-        </div>
-        <h3>Protection &amp; insurance</h3>
-        <p>Life cover, critical illness, income protection and private medical insurance explained.</p>
-      </div>
-
-      <div class="topic-card">
-        <div class="topic-icon icon-coral">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-        </div>
-        <h3>Mortgages &amp; property</h3>
-        <p>First-time buyer guides, remortgaging, buy-to-let and equity release explained.</p>
-      </div>
-
-      <div class="topic-card">
-        <div class="topic-icon icon-purple">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-        </div>
-        <h3>Tax planning</h3>
-        <p>Inheritance tax, capital gains, pension tax relief and tax-efficient giving strategies.</p>
-      </div>
-
-      <div class="topic-card">
-        <div class="topic-icon icon-green">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        </div>
-        <h3>Estate &amp; later life planning</h3>
-        <p>Wills, lasting powers of attorney, care fees and passing on wealth.</p>
-      </div>
-
+    <div class="filter-bar" id="filter-bar">
+      <button class="filter-btn active" data-filter="all">All guides</button>
+      <button class="filter-btn" data-filter="newsletter">Newsletter</button>
+      <button class="filter-btn" data-filter="retirement">Retirement</button>
+      <button class="filter-btn" data-filter="investments">Investments &amp; ISAs</button>
+      <button class="filter-btn" data-filter="pensions">Pensions</button>
+      <button class="filter-btn" data-filter="tax">Tax &amp; Estate</button>
+      <button class="filter-btn" data-filter="protection">Protection</button>
+      <button class="filter-btn" data-filter="later-life">Later Life</button>
     </div>
 
-    <!-- Newsletter archive -->
-    <hr class="knowledge-divider" />
-    <div class="kc-section-header">
-      <h2>Newsletter archive</h2>
-      <p>Bi-monthly newsletters published since 2022, covering topical financial planning issues.</p>
+    <p class="filter-count" id="filter-count"></p>
+
+    <div class="guides-grid" id="guides-grid"></div>
+    <p class="guides-empty" id="guides-empty">No guides found for this topic.</p>
+
+    <div class="load-more-wrap">
+      <button class="load-more-btn" id="load-more">Show all guides</button>
     </div>
 
-    <div class="guide-list">
-      <div class="guide-item">
-        <div class="guide-icon">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-        </div>
-        <div class="guide-text">
-          <div class="guide-title">May / June 2026</div>
-          <div class="guide-meta">Health &amp; pensions · Wealth transfer · Divorce &amp; finances</div>
-        </div>
-        <span class="guide-badge">Latest</span>
-      </div>
-      <div class="guide-item">
-        <div class="guide-icon">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-        </div>
-        <div class="guide-text">
-          <div class="guide-title">March / April 2026</div>
-          <div class="guide-meta">Retirement income · ISA allowances · Business protection</div>
-        </div>
-      </div>
-      <div class="guide-item">
-        <div class="guide-icon">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-        </div>
-        <div class="guide-text">
-          <div class="guide-title">January / February 2026</div>
-          <div class="guide-meta">Financial planning in the new year · Tax planning · Care fees</div>
-        </div>
-      </div>
-      <div class="guide-item">
-        <div class="guide-icon">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-        </div>
-        <div class="guide-text">
-          <div class="guide-title">November / December 2025</div>
-          <div class="guide-meta">Inheritance tax planning · Pension freedoms · Estate planning</div>
-        </div>
-      </div>
-      <div class="guide-item">
-        <div class="guide-icon">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-        </div>
-        <div class="guide-text">
-          <div class="guide-title">Earlier editions</div>
-          <div class="guide-meta">Archive from January / February 2022 onwards</div>
-        </div>
-      </div>
+    <div class="factsheets-header">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+      <h2>Factsheets &amp; guides</h2>
     </div>
-
-    <!-- Factsheets -->
-    <hr class="knowledge-divider" />
-    <div class="kc-section-header">
-      <h2>Factsheets</h2>
-      <p>In-depth guides on key topics — contact us to request printed or digital copies.</p>
-    </div>
-
     <div class="factsheet-grid">
       <a href="care-fees-planning.html" class="factsheet-card">
         <div class="factsheet-icon">
@@ -171,12 +78,12 @@
         </div>
         <div>
           <div class="factsheet-label">Care fees planning</div>
-          <div class="factsheet-sub">Understanding costs, funding &amp; entitlements</div>
+          <div class="factsheet-sub">Understanding costs, funding &amp; state entitlements</div>
         </div>
       </a>
       <a href="care-fees-planning.html" class="factsheet-card">
         <div class="factsheet-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
         </div>
         <div>
           <div class="factsheet-label">Making a will</div>
@@ -189,7 +96,7 @@
         </div>
         <div>
           <div class="factsheet-label">Lasting powers of attorney</div>
-          <div class="factsheet-sub">Protecting your interests and those you love</div>
+          <div class="factsheet-sub">Protecting your interests and those you care for</div>
         </div>
       </a>
     </div>
@@ -228,6 +135,217 @@
       Your home may be repossessed if you do not keep up repayments on your mortgage.
     </div>
   </footer>
+
+  <script>
+    const CDN = 'https://www.riverglenifa.co.uk/wp-content/uploads/';
+
+    const topicLabels = {
+      newsletter:  'Newsletter',
+      retirement:  'Retirement',
+      investments: 'Investments & ISAs',
+      pensions:    'Pensions',
+      tax:         'Tax & Estate',
+      protection:  'Protection',
+      'later-life': 'Later Life',
+    };
+
+    const guides = [
+      // 2026 May/Jun
+      { title: 'Riverglen Newsletter',            date: 'May / Jun 2026', topic: 'newsletter',  img: CDN+'2026/05/esm128_singles-1.jpg' },
+      { title: 'Critical Illness',                date: 'May / Jun 2026', topic: 'protection',  img: CDN+'2026/05/criticalillness26_singles-1.jpg' },
+      { title: 'Financial Independence',          date: 'May / Jun 2026', topic: 'investments', img: CDN+'2026/05/financialindependence26_singles-1.jpg' },
+      { title: 'Planning for a Longer Retirement',date: 'May / Jun 2026', topic: 'retirement',  img: CDN+'2026/05/longerretirement_singles-1.jpg' },
+      // 2026 Mar/Apr
+      { title: 'Riverglen Newsletter',            date: 'Mar / Apr 2026', topic: 'newsletter',  img: CDN+'2026/03/esm127_singles-1.jpg' },
+      { title: 'Trusts',                          date: 'Mar / Apr 2026', topic: 'tax',         img: CDN+'2026/03/trusts26_singles-1.jpg' },
+      { title: 'Wealth Creation',                 date: 'Mar / Apr 2026', topic: 'investments', img: CDN+'2026/03/wealthcreation26_singles-1.jpg' },
+      { title: 'Year-End Tax Planning',           date: 'Mar / Apr 2026', topic: 'tax',         img: CDN+'2026/03/yearend26_singles-1.jpg' },
+      // 2026 Jan/Feb
+      { title: 'Riverglen Newsletter',            date: 'Jan / Feb 2026', topic: 'newsletter',  img: CDN+'2026/01/esm126_singles-1.jpg' },
+      { title: 'Pension Inheritance Tax',         date: 'Jan / Feb 2026', topic: 'tax',         img: CDN+'2026/01/navigating_new_pension_inheritance_tax_singles-1.jpg' },
+      { title: 'Protecting Your Wealth',          date: 'Jan / Feb 2026', topic: 'investments', img: CDN+'2026/01/protecting_wealth_2026_singles-1.jpg' },
+      { title: 'Tracing & Consolidating Pensions',date: 'Jan / Feb 2026', topic: 'pensions',    img: CDN+'2026/01/tracingandconsolidatingpensions_singles-1.jpg' },
+      // 2025 Nov/Dec
+      { title: 'Riverglen Newsletter',            date: 'Nov / Dec 2025', topic: 'newsletter',  img: CDN+'2025/10/esm125_singles-1.jpg' },
+      { title: 'Wealth Creation',                 date: 'Nov / Dec 2025', topic: 'investments', img: CDN+'2025/10/wealth_creation25_singles-1.jpg' },
+      { title: 'A Successful Retirement',         date: 'Nov / Dec 2025', topic: 'retirement',  img: CDN+'2025/10/successful_retirement_singles-1.jpg' },
+      { title: 'Securing Your Legacy',            date: 'Nov / Dec 2025', topic: 'tax',         img: CDN+'2025/10/securing_your_legacy_singles-1.jpg' },
+      // 2025 Sep/Oct
+      { title: 'Riverglen Newsletter',            date: 'Sep / Oct 2025', topic: 'newsletter',  img: CDN+'2025/09/esm124_singles-1.jpg' },
+      { title: 'Financial Protection',            date: 'Sep / Oct 2025', topic: 'protection',  img: CDN+'2025/09/financial_protection25_singles-1.jpg' },
+      { title: 'Maximising Your ISA',             date: 'Sep / Oct 2025', topic: 'investments', img: CDN+'2025/09/isa2025_singles-1.jpg' },
+      { title: 'Pension Annuities',               date: 'Sep / Oct 2025', topic: 'pensions',    img: CDN+'2025/09/pensionannuities_singles-1.jpg' },
+      // 2025 Jul/Aug
+      { title: 'Riverglen Newsletter',            date: 'Jul / Aug 2025', topic: 'newsletter',  img: CDN+'2025/07/esm123_singles-1.jpg' },
+      { title: 'Building Your Dream Retirement',  date: 'Jul / Aug 2025', topic: 'retirement',  img: CDN+'2025/07/buildingyourdreamretirement_singles-1.jpg' },
+      { title: 'Retiring Overseas',               date: 'Jul / Aug 2025', topic: 'retirement',  img: CDN+'2025/07/retiringoverseas_singles-1.jpg' },
+      { title: 'Setting Investment Goals',        date: 'Jul / Aug 2025', topic: 'investments', img: CDN+'2025/07/settinginvestmentgoals_singles-1.jpg' },
+      // 2025 May/Jun
+      { title: 'Riverglen Newsletter',            date: 'May / Jun 2025', topic: 'newsletter',  img: CDN+'2025/05/esm122_singles-1.jpg' },
+      { title: 'Planning for Business Owners',    date: 'May / Jun 2025', topic: 'investments', img: CDN+'2025/05/financialplanning25_singles-1.jpg' },
+      { title: 'Diversifying Your Investments',   date: 'May / Jun 2025', topic: 'investments', img: CDN+'2025/05/diversifying_singles-1.jpg' },
+      { title: 'Navigating New IHT Rules',        date: 'May / Jun 2025', topic: 'tax',         img: CDN+'2025/05/ihtrules_singles-1.jpg' },
+      // 2025 Mar/Apr
+      { title: 'Riverglen Newsletter',            date: 'Mar / Apr 2025', topic: 'newsletter',  img: CDN+'2025/03/esm121_singles-1.jpg' },
+      { title: 'Preserving Your Wealth',          date: 'Mar / Apr 2025', topic: 'investments', img: CDN+'2025/03/preservingwealth25_singles-1.jpg' },
+      { title: 'Making Your Money Work Harder',   date: 'Mar / Apr 2025', topic: 'investments', img: CDN+'2025/03/moneywork_singles-1.jpg' },
+      { title: 'SIPPs',                           date: 'Mar / Apr 2025', topic: 'pensions',    img: CDN+'2025/03/sipps25_singles-1.jpg' },
+      // 2025 Jan/Feb
+      { title: 'Riverglen Newsletter',            date: 'Jan / Feb 2025', topic: 'newsletter',  img: CDN+'2025/01/esm120_singles-1.jpg' },
+      { title: 'New Year Financial Strategies',   date: 'Jan / Feb 2025', topic: 'investments', img: CDN+'2025/01/newyearstrategies_singles-1.jpg' },
+      { title: 'Mastering ISAs',                  date: 'Jan / Feb 2025', topic: 'investments', img: CDN+'2025/01/masteringisas_singles-1.jpg' },
+      { title: 'End of Tax Year Planning',        date: 'Jan / Feb 2025', topic: 'tax',         img: CDN+'2025/01/endoftaxyear24_singles-1.jpg' },
+      // 2024 Nov/Dec
+      { title: 'Riverglen Newsletter',            date: 'Nov / Dec 2024', topic: 'newsletter',  img: CDN+'2024/11/esm119_singles-1.jpg' },
+      { title: 'Income Protection Insurance',     date: 'Nov / Dec 2024', topic: 'protection',  img: CDN+'2024/11/incomeprotectioninsurance24_singles-1.jpg' },
+      { title: 'Preparing for Retirement',        date: 'Nov / Dec 2024', topic: 'retirement',  img: CDN+'2024/11/preparingforretirement24_singles-1.jpg' },
+      { title: 'Principles of Building Wealth',   date: 'Nov / Dec 2024', topic: 'investments', img: CDN+'2024/11/principlesofbuildingwealth_singles-1.jpg' },
+      // 2024 Sep/Oct
+      { title: 'Riverglen Newsletter',            date: 'Sep / Oct 2024', topic: 'newsletter',  img: CDN+'2024/09/esm118_singles-1.jpg' },
+      { title: 'Navigating Divorce & Finances',   date: 'Sep / Oct 2024', topic: 'investments', img: CDN+'2024/09/divorce24_singles-1.jpg' },
+      { title: 'Financial Fitness',               date: 'Sep / Oct 2024', topic: 'investments', img: CDN+'2024/09/financialfitness_singles-1.jpg' },
+      { title: 'Personal Protection',             date: 'Sep / Oct 2024', topic: 'protection',  img: CDN+'2024/09/personalprotection24_singles-1.jpg' },
+      // 2024 Jul/Aug
+      { title: 'Riverglen Newsletter',            date: 'Jul / Aug 2024', topic: 'newsletter',  img: CDN+'2024/07/esm117_singles-1.jpg' },
+      { title: 'Financial Planning for Business Owners', date: 'Jul / Aug 2024', topic: 'investments', img: CDN+'2024/07/businessowners24_singles-1.jpg' },
+      { title: 'Later Life Planning',             date: 'Jul / Aug 2024', topic: 'later-life',  img: CDN+'2024/07/laterlife24_singles-1.jpg' },
+      { title: 'Trusts',                          date: 'Jul / Aug 2024', topic: 'tax',         img: CDN+'2024/07/trusts24_singles-1.jpg' },
+      // 2024 May/Jun
+      { title: 'Riverglen Newsletter',            date: 'May / Jun 2024', topic: 'newsletter',  img: CDN+'2024/05/esm116_singles-1.jpg' },
+      { title: 'Estate Planning',                 date: 'May / Jun 2024', topic: 'tax',         img: CDN+'2024/05/estateplanning24_singles-1.jpg' },
+      { title: 'Building a Bigger Pension Pot',   date: 'May / Jun 2024', topic: 'pensions',    img: CDN+'2024/05/buildingabiggerpensionpot24_singles-1.jpg' },
+      { title: 'Individual Savings Accounts',     date: 'May / Jun 2024', topic: 'investments', img: CDN+'2024/05/individualsavingsaccounts24_singles-1.jpg' },
+      // 2024 Mar/Apr
+      { title: 'Riverglen Newsletter',            date: 'Mar / Apr 2024', topic: 'newsletter',  img: CDN+'2024/03/esm115_singles-1.jpg' },
+      { title: 'Navigating Retirement',           date: 'Mar / Apr 2024', topic: 'retirement',  img: CDN+'2024/03/navigatingretirement_singles-1.jpg' },
+      { title: 'Protecting Your Family',          date: 'Mar / Apr 2024', topic: 'protection',  img: CDN+'2024/03/protectingyourfamily_singles-1.jpg' },
+      { title: 'Successful Investing',            date: 'Mar / Apr 2024', topic: 'investments', img: CDN+'2024/03/successfulinvesting_singles-1.jpg' },
+      // 2024 Jan/Feb
+      { title: 'Riverglen Newsletter',            date: 'Jan / Feb 2024', topic: 'newsletter',  img: CDN+'2024/01/esm114_singles-1.jpg' },
+      { title: 'Financial Planning for the New Year', date: 'Jan / Feb 2024', topic: 'investments', img: CDN+'2024/01/financialplanningforthenewyear_singles-1.jpg' },
+      { title: 'Individual Savings Accounts',     date: 'Jan / Feb 2024', topic: 'investments', img: CDN+'2024/01/individualsavingsaccounts_singles-1.jpg' },
+      { title: 'Year-End Tax Planning',           date: 'Jan / Feb 2024', topic: 'tax',         img: CDN+'2024/01/yearendtax_singles-1.jpg' },
+      // 2023 Nov/Dec
+      { title: 'Riverglen Newsletter',            date: 'Nov / Dec 2023', topic: 'newsletter',  img: CDN+'2023/11/esm113_singles-1.jpg' },
+      { title: 'Effective Wealth Creation',       date: 'Nov / Dec 2023', topic: 'investments', img: CDN+'2023/11/effectivewealthcreation_singles-1.jpg' },
+      { title: 'Making a Will',                   date: 'Nov / Dec 2023', topic: 'later-life',  img: CDN+'2023/11/makingawill_singles-1.jpg' },
+      { title: 'Preparing Your Finances',         date: 'Nov / Dec 2023', topic: 'retirement',  img: CDN+'2023/11/preparingyourfinances_singles-1.jpg' },
+      // 2023 Sep/Oct
+      { title: 'Riverglen Newsletter',            date: 'Sep / Oct 2023', topic: 'newsletter',  img: CDN+'2023/09/esm112_singles-1.jpg' },
+      { title: 'Investing Essentials',            date: 'Sep / Oct 2023', topic: 'investments', img: CDN+'2023/09/investingessentials_singles-1.jpg' },
+      { title: 'Investing for the Next Generation',date:'Sep / Oct 2023', topic: 'investments', img: CDN+'2023/09/investingforthenextgeneration_singles-1.jpg' },
+      { title: 'Trace a Lost Pension',            date: 'Sep / Oct 2023', topic: 'pensions',    img: CDN+'2023/09/tracealostpension_singles-1.jpg' },
+      // 2023 May/Jun
+      { title: 'Riverglen Newsletter',            date: 'May / Jun 2023', topic: 'newsletter',  img: CDN+'2023/05/esm110_singles-1.jpg' },
+      { title: 'Principles of Growing Money',     date: 'May / Jun 2023', topic: 'investments', img: CDN+'2023/05/principlesofgrowingmoney_singles-1.jpg' },
+      { title: 'Planning for Retirement',         date: 'May / Jun 2023', topic: 'retirement',  img: CDN+'2023/05/planningforretirement_singles-1.jpg' },
+      { title: 'Pension Drawdown',                date: 'May / Jun 2023', topic: 'pensions',    img: CDN+'2023/05/pensiondrawdown_singles-1.jpg' },
+      // 2023 Mar/Apr
+      { title: 'Riverglen Newsletter',            date: 'Mar / Apr 2023', topic: 'newsletter',  img: CDN+'2023/03/esm109_singles.jpg' },
+      { title: 'A Future for Your Grandchildren', date: 'Mar / Apr 2023', topic: 'investments', img: CDN+'2023/03/future_for_grandchildren_singles.jpg' },
+      { title: 'Inheritance Tax',                 date: 'Mar / Apr 2023', topic: 'tax',         img: CDN+'2023/03/iht23_singles.jpg' },
+      { title: 'Retirement Planning',             date: 'Mar / Apr 2023', topic: 'retirement',  img: CDN+'2023/03/retirement23_singles.jpg' },
+      // 2023 Jan/Feb
+      { title: 'Riverglen Newsletter',            date: 'Jan / Feb 2023', topic: 'newsletter',  img: CDN+'2023/01/esm108_singles-1.jpg' },
+      { title: 'Individual Savings Accounts',     date: 'Jan / Feb 2023', topic: 'investments', img: CDN+'2023/01/individual_savings_singles-1.jpg' },
+      { title: 'Your Financial Plan for 2023',    date: 'Jan / Feb 2023', topic: 'investments', img: CDN+'2023/01/financial_plan_2023_singles-1.jpg' },
+      { title: 'Capital Gains Tax',               date: 'Jan / Feb 2023', topic: 'tax',         img: CDN+'2023/01/cap_gains_tax_singles-1.jpg' },
+      // 2022 Nov/Dec
+      { title: 'Riverglen Newsletter',            date: 'Nov / Dec 2022', topic: 'newsletter',  img: CDN+'2022/11/esm107_singles-1.jpg' },
+      { title: 'Retirement Matters',              date: 'Nov / Dec 2022', topic: 'retirement',  img: CDN+'2022/11/retirement-matters_singles-1.jpg' },
+      { title: 'Investing Principles',            date: 'Nov / Dec 2022', topic: 'investments', img: CDN+'2022/11/investingprinciples_singles-1.jpg' },
+      { title: 'A Tax-Efficient Legacy',          date: 'Nov / Dec 2022', topic: 'tax',         img: CDN+'2022/11/tax-efficient-legacy_singles-1.jpg' },
+      // 2022 Sep/Oct
+      { title: 'Riverglen Newsletter',            date: 'Sep / Oct 2022', topic: 'newsletter',  img: CDN+'2022/09/esm106_singles-1.jpg' },
+      { title: 'Family Protection',               date: 'Sep / Oct 2022', topic: 'protection',  img: CDN+'2022/09/family_protection_singles-1.jpg' },
+      { title: 'Maximising Pension Savings',      date: 'Sep / Oct 2022', topic: 'pensions',    img: CDN+'2022/09/maximising_pension_savings_singles-1.jpg' },
+      { title: 'Wealth Creation',                 date: 'Sep / Oct 2022', topic: 'investments', img: CDN+'2022/09/wealth_creation22_singles-1.jpg' },
+      // 2022 Jul/Aug
+      { title: 'Riverglen Newsletter',            date: 'Jul / Aug 2022', topic: 'newsletter',  img: CDN+'2022/07/esm105_singles.jpg' },
+      { title: 'Investing 2022',                  date: 'Jul / Aug 2022', topic: 'investments', img: CDN+'2022/07/investing2022_singles.jpg' },
+      { title: 'Set for Retirement',              date: 'Jul / Aug 2022', topic: 'retirement',  img: CDN+'2022/07/set-for-retirement_singles.jpg' },
+      { title: 'Your Future',                     date: 'Jul / Aug 2022', topic: 'investments', img: CDN+'2022/07/your-future_singles.jpg' },
+      // 2022 May/Jun
+      { title: 'Riverglen Newsletter',            date: 'May / Jun 2022', topic: 'newsletter',  img: CDN+'2022/06/esm104_singles.jpg' },
+      { title: 'Estate Preservation',             date: 'May / Jun 2022', topic: 'tax',         img: CDN+'2022/06/estate_preservation22_singles.jpg' },
+      { title: 'Building Financial Wealth',       date: 'May / Jun 2022', topic: 'investments', img: CDN+'2022/06/building_financial_wealth_singles.jpg' },
+      // 2022 Mar/Apr
+      { title: 'Riverglen Newsletter',            date: 'Mar / Apr 2022', topic: 'newsletter',  img: CDN+'2022/06/esm103_singles-1.jpg' },
+      { title: 'Financial Protection',            date: 'Mar / Apr 2022', topic: 'protection',  img: CDN+'2022/06/financial_protection_singles-1.jpg' },
+      { title: 'Lasting Power of Attorney',       date: 'Mar / Apr 2022', topic: 'later-life',  img: CDN+'2022/06/lpa_singles-1.jpg' },
+      { title: 'Pound Cost Averaging',            date: 'Mar / Apr 2022', topic: 'investments', img: CDN+'2022/06/pound_cost_averaging_singles-1.jpg' },
+      // 2022 Jan/Feb
+      { title: 'Riverglen Newsletter',            date: 'Jan / Feb 2022', topic: 'newsletter',  img: CDN+'2022/06/esm102_singles.jpg' },
+      { title: 'Maximising Your Wealth',          date: 'Jan / Feb 2022', topic: 'investments', img: CDN+'2022/06/maximising-your-wealth_singles.jpg' },
+      { title: 'Setting Goals',                   date: 'Jan / Feb 2022', topic: 'investments', img: CDN+'2022/06/setting-goals_singles.jpg' },
+      { title: 'Tax Year-End Planning',           date: 'Jan / Feb 2022', topic: 'tax',         img: CDN+'2022/06/tax22_singles.jpg' },
+    ];
+
+    const INITIAL_COUNT = 24;
+    let currentFilter = 'all';
+    let showAll = false;
+
+    function renderGuides() {
+      const filtered = currentFilter === 'all'
+        ? guides
+        : guides.filter(g => g.topic === currentFilter);
+
+      const toShow = (currentFilter !== 'all' || showAll)
+        ? filtered
+        : filtered.slice(0, INITIAL_COUNT);
+
+      const grid   = document.getElementById('guides-grid');
+      const empty  = document.getElementById('guides-empty');
+      const count  = document.getElementById('filter-count');
+      const btn    = document.getElementById('load-more');
+
+      if (filtered.length === 0) {
+        grid.innerHTML = '';
+        empty.style.display = 'block';
+      } else {
+        empty.style.display = 'none';
+        grid.innerHTML = toShow.map(g => `
+          <div class="guide-card">
+            <div class="guide-card-img">
+              <img src="${g.img}" alt="${g.title}" loading="lazy" />
+            </div>
+            <div class="guide-card-body">
+              <span class="guide-topic-tag tag-${g.topic}">${topicLabels[g.topic] || g.topic}</span>
+              <p class="guide-card-title">${g.title}</p>
+              <p class="guide-card-date">${g.date}</p>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      const label = currentFilter === 'all' ? 'guides' : topicLabels[currentFilter] + ' guides';
+      count.textContent = `${filtered.length} ${label}`;
+
+      if (currentFilter === 'all' && !showAll && filtered.length > INITIAL_COUNT) {
+        btn.style.display = 'inline-block';
+        btn.textContent = `Show all ${filtered.length} guides`;
+      } else {
+        btn.style.display = 'none';
+      }
+    }
+
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentFilter = btn.dataset.filter;
+        showAll = false;
+        renderGuides();
+      });
+    });
+
+    document.getElementById('load-more').addEventListener('click', () => {
+      showAll = true;
+      renderGuides();
+    });
+
+    renderGuides();
+  </script>
 
 </body>
 </html>
