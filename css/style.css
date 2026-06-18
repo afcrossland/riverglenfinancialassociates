@@ -73,8 +73,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  max-width: 1080px;
+  margin: 0 auto;
   padding: 1rem 2rem;
-  border-bottom: 0.5px solid rgba(255, 255, 255, 0.15);
 }
 
 .nav-logo {
@@ -135,6 +136,8 @@ body {
 }
 
 .hero-body {
+  max-width: 1080px;
+  margin: 0 auto;
   padding: 4rem 2rem 3rem;
 }
 
@@ -262,7 +265,7 @@ body {
 .divider {
   height: 0.5px;
   background: var(--border);
-  margin: 0 2rem;
+  margin: 0;
 }
 
 /* ===========================
@@ -271,7 +274,7 @@ body {
 
 .cta-band {
   background: linear-gradient(135deg, var(--blue-800), var(--blue-600));
-  padding: 2.5rem 2rem;
+  padding: 2.5rem max(2rem, calc((100vw - 1080px) / 2));
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -302,7 +305,7 @@ body {
    =========================== */
 
 .footer {
-  padding: 2rem;
+  padding: 2rem max(2rem, calc((100vw - 1080px) / 2));
   background: var(--bg-secondary);
   border-top: 0.5px solid var(--border);
   display: flex;
@@ -362,9 +365,8 @@ body {
 .dropdown-menu {
   display: none;
   position: absolute;
-  top: calc(100% + 10px);
-  left: 50%;
-  transform: translateX(-50%);
+  top: calc(100% + 8px);
+  left: 0;
   background: white;
   border: 0.5px solid rgba(0,0,0,0.12);
   border-radius: var(--radius-md);
