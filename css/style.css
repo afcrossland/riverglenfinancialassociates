@@ -66,6 +66,60 @@ body {
 }
 
 /* ===========================
+   Top contact bar
+   =========================== */
+
+.top-bar {
+  background: rgba(0, 0, 0, 0.2);
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.08);
+}
+
+.top-bar-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 5px 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-bar-contact {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.top-bar-link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.72);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.top-bar-link:hover {
+  color: white;
+}
+
+.top-bar-login {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.72);
+  text-decoration: none;
+  padding: 3px 10px;
+  border-radius: 4px;
+  border: 0.5px solid rgba(255, 255, 255, 0.22);
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+
+.top-bar-login:hover {
+  color: white;
+  border-color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* ===========================
    Navigation
    =========================== */
 
@@ -416,4 +470,7 @@ body {
   .cta-band { flex-direction: column; text-align: center; }
   .cta-band .btn-row { justify-content: center; }
   .footer { flex-direction: column; padding: 1.5rem; }
+  .top-bar-inner { padding: 4px 1rem; gap: 0.5rem; }
+  .top-bar-contact { gap: 0.75rem; }
+  .top-bar-login { display: none; }
 }
