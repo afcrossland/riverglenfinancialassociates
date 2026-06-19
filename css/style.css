@@ -552,15 +552,18 @@ body {
     color: rgba(255, 255, 255, 0.85) !important;
   }
 
-  /* Services dropdown — always expanded inline on mobile */
+  /* Services dropdown — tap to expand on mobile */
   .dropdown-menu {
     position: static !important;
-    display: block !important;
+    display: none !important;
     background: transparent !important;
     border: none !important;
     box-shadow: none !important;
     padding: 2px 0 6px 14px !important;
     min-width: auto !important;
+  }
+  .dropdown-menu.mobile-open {
+    display: block !important;
   }
   .dropdown-menu::before { display: none; }
   .dropdown-menu a {
@@ -573,8 +576,17 @@ body {
     background: none !important;
     color: rgba(255, 255, 255, 0.9) !important;
   }
-  /* Hide chevron — services always visible on mobile */
-  .nav-dropdown > a svg { display: none; }
+  /* Chevron rotates when open */
+  .nav-dropdown > a svg {
+    transition: transform 0.2s;
+  }
+  .nav-dropdown > a[aria-expanded="true"] svg {
+    transform: rotate(180deg);
+  }
+
+  /* Top bar: centre just the phone number on small screens */
+  .top-bar-inner { padding: 5px 1rem; justify-content: center; }
+  .top-bar-contact a:not(:first-child) { display: none; }
 
   /* Rest of page */
   .hero-body { padding: 2rem 1rem; }

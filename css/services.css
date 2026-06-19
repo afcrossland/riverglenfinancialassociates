@@ -103,13 +103,13 @@
 }
 
 .disclaimer {
-  background: var(--amber-50);
-  border: 0.5px solid rgba(133, 79, 11, 0.25);
-  border-radius: var(--radius-md);
-  padding: 12px 14px;
+  border-left: 3px solid var(--gray-400);
+  background: var(--gray-100);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: 10px 14px 10px 16px;
   font-size: 12px;
-  color: var(--amber-600);
-  line-height: 1.55;
+  color: var(--text-secondary);
+  line-height: 1.6;
   margin-top: 1.5rem;
 }
 

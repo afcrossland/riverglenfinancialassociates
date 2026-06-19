@@ -326,8 +326,8 @@
         empty.style.display = 'none';
         grid.innerHTML = toShow.map(g => `
           <div class="guide-card">
-            <div class="guide-card-img">
-              <img src="${g.img}" alt="${g.title}" loading="lazy" />
+            <div class="guide-card-img" data-topic="${g.topic}">
+              <img src="${g.img}" alt="${g.title}" loading="lazy" onerror="this.style.display='none'" />
             </div>
             <div class="guide-card-body">
               <span class="guide-topic-tag tag-${g.topic}">${topicLabels[g.topic] || g.topic}</span>
