@@ -2,6 +2,8 @@
    Riverglen IFA — Shared Styles
    =========================== */
 
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap');
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -9,12 +11,12 @@
 }
 
 :root {
-  --blue-50:  #E6F1FB;
-  --blue-200: #85B7EB;
-  --blue-400: #378ADD;
-  --blue-600: #185FA5;
-  --blue-800: #0C447C;
-  --blue-900: #042C53;
+  --blue-50:  #EAF2FC;
+  --blue-200: #8BBCE8;
+  --blue-400: #3A8EE6;
+  --blue-600: #1762AB;
+  --blue-800: #0C3E74;
+  --blue-900: #061E3A;
 
   --teal-50:  #E1F5EE;
   --teal-600: #0F6E56;
@@ -54,7 +56,10 @@
   --radius-md: 8px;
   --radius-lg: 12px;
 
-  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-sans:    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-display: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+
+  --bg-page: #F8F7F6;
 }
 
 body {
@@ -62,7 +67,9 @@ body {
   font-size: 16px;
   line-height: 1.7;
   color: var(--text-primary);
-  background: var(--bg-primary);
+  background: var(--bg-page);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* ===========================
@@ -185,7 +192,9 @@ body {
    =========================== */
 
 .page-hero {
-  background: linear-gradient(135deg, var(--blue-800) 0%, var(--blue-600) 100%);
+  background:
+    radial-gradient(ellipse 65% 80% at 75% 40%, rgba(55, 120, 200, 0.35) 0%, transparent 70%),
+    linear-gradient(145deg, #061626 0%, #0B2F5C 40%, #1762AB 100%);
   padding: 0;
   color: white;
 }
@@ -208,18 +217,20 @@ body {
 }
 
 .page-hero h1 {
-  font-size: 28px;
-  font-weight: 500;
+  font-family: var(--font-display);
+  font-size: 38px;
+  font-weight: 400;
   color: white;
-  margin-bottom: 0.5rem;
-  line-height: 1.25;
+  margin-bottom: 0.6rem;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
 }
 
 .page-hero p {
   font-size: 15px;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.75);
   max-width: 520px;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 /* ===========================
@@ -263,14 +274,18 @@ body {
    =========================== */
 
 .card {
-  background: var(--bg-primary);
+  background: #fff;
   border: 0.5px solid var(--border);
   border-radius: var(--radius-lg);
   overflow: hidden;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
-.card:hover { border-color: var(--border-hover); }
+.card:hover {
+  border-color: rgba(23, 98, 171, 0.3);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
 
 /* ===========================
    Badges & Pills
@@ -328,7 +343,7 @@ body {
    =========================== */
 
 .cta-band {
-  background: linear-gradient(135deg, var(--blue-800), var(--blue-600));
+  background: linear-gradient(145deg, #061626 0%, #0B2F5C 45%, #1762AB 100%);
   padding: 2.5rem max(2rem, calc((100vw - 1080px) / 2));
   display: flex;
   align-items: center;
@@ -338,9 +353,11 @@ body {
 }
 
 .cta-band h2 {
-  font-size: 20px;
-  font-weight: 500;
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 400;
   color: white;
+  letter-spacing: -0.01em;
 }
 
 .cta-band p {
