@@ -180,6 +180,13 @@
 .service-card {
   padding: 1.25rem;
   cursor: pointer;
+  position: relative;
+}
+
+.service-link::after {
+  content: '';
+  position: absolute;
+  inset: 0;
 }
 
 .service-icon {
