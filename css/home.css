@@ -19,7 +19,7 @@
   color: white;
   line-height: 1.12;
   margin-bottom: 1.1rem;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.04em;
 }
 
 .hero-copy h1 em {
@@ -163,6 +163,7 @@
   font-weight: 400;
   color: var(--text-primary);
   margin-bottom: 0.5rem;
+  letter-spacing: 0.025em;
 }
 
 .section-header p {
@@ -230,6 +231,7 @@
   font-weight: 400;
   color: var(--text-primary);
   margin-bottom: 1.5rem;
+  letter-spacing: 0.025em;
 }
 
 .testi-grid {
@@ -288,7 +290,7 @@
 
   .hero-copy h1 {
     font-size: 34px;
-    letter-spacing: 0.005em;
+    letter-spacing: 0.03em;
   }
 
   .services-grid {

@@ -223,7 +223,7 @@ body {
   color: white;
   margin-bottom: 0.6rem;
   line-height: 1.2;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.04em;
 }
 
 .page-hero p {
@@ -355,7 +355,7 @@ body {
   font-size: 24px;
   font-weight: 400;
   color: white;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.03em;
 }
 
 .cta-band p {
