@@ -134,9 +134,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 1rem 2rem;
+  padding: 0.85rem max(1.5rem, calc((100vw - 1080px) / 2));
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background: rgba(5, 12, 22, 0.97);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.25);
 }
 
 .nav-logo {
@@ -522,7 +528,7 @@ body {
 @media (max-width: 768px) {
   /* Nav shell */
   .nav {
-    padding: 0.75rem 1rem;
+    padding: 0.65rem 1rem;
     flex-wrap: wrap;
   }
   .nav-cta { display: none; }
